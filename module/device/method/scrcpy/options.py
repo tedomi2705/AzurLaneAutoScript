@@ -53,7 +53,7 @@ class ScrcpyOptions:
             'max_size=1280',
             # 20Mbps, the maximum output bitrate of scrcpy
             # If a higher value is set, scrcpy fallback to 8Mbps default.
-            'bit_rate=20000000',
+            'video_bit_rate=20000000',
             # Screenshot time cost <= 300ms is enough for human speed.
             f'max_fps={cls.frame_rate}',
             # No orientation lock
@@ -78,7 +78,7 @@ class ScrcpyOptions:
             # Empty value, let scrcpy to decide
             # 'encoder_name=',
             # Codec options
-            f'codec_options={cls.codec_options()}',
+            f'video_codec_options={cls.codec_options()}',
             # Useless, always false
             'power_off_on_close=false',
             'clipboard_autosync=false',

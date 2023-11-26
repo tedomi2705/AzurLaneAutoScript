@@ -102,13 +102,13 @@ class ScrcpyOptions:
         return commands
 
     @classmethod
-    def command_v120(cls, jar_path='/data/local/tmp/scrcpy-server.jar') -> t.List[str]:
+    def command_v23(cls, jar_path='/data/local/tmp/scrcpy-server.jar') -> t.List[str]:
         commands = [
             f"CLASSPATH={jar_path}",
             "app_process",
             "/",
             "com.genymobile.scrcpy.Server",
-            "1.20",  # Scrcpy server version
+            "2.3",  # Scrcpy server version
             "info",  # Log level: info, verbose...
             f"1280",  # Max screen width (long side)
             f"20000000",  # Bitrate of video
@@ -129,4 +129,4 @@ class ScrcpyOptions:
 
 
 if __name__ == '__main__':
-    print(' '.join(ScrcpyOptions.command_v120()))
+    print(' '.join(ScrcpyOptions.command_v23()))

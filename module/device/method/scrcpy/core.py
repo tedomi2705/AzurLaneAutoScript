@@ -67,7 +67,7 @@ class ScrcpyCore(Connection):
             ScrcpyError:
         """
         logger.hr('Scrcpy server start')
-        commands = ScrcpyOptions.command_v120(jar_path=self.config.SCRCPY_FILEPATH_REMOTE)
+        commands = ScrcpyOptions.command_v23(jar_path=self.config.SCRCPY_FILEPATH_REMOTE)
         self._scrcpy_server_stream: AdbConnection = self.adb.shell(
             commands,
             stream=True,
